@@ -1,8 +1,6 @@
-// src/adminjs/resources/episode.ts
-
-import path from 'path'
-import uploadFileFeature from '@adminjs/upload'
-import { FeatureType, ResourceOptions } from 'adminjs'
+import path from 'path';
+import uploadFileFeature from '@adminjs/upload';
+import { FeatureType, ResourceOptions } from 'adminjs';
 
 export const episodeResourceOptions: ResourceOptions = {
   navigation: 'Catálogo',
@@ -10,7 +8,7 @@ export const episodeResourceOptions: ResourceOptions = {
   filterProperties: ['name', 'synopsis', 'courseId', 'secondsLong', 'createdAt', 'updatedAt'],
   listProperties: ['id', 'name', 'courseId', 'order', 'secondsLong'],
   showProperties: ['id', 'name', 'synopsis', 'courseId', 'order', 'videoUrl', 'secondsLong', 'createdAt', 'updatedAt']
-}
+};
 
 export const episodeResourceFeatures: FeatureType[] = [
   uploadFileFeature({
@@ -25,4 +23,4 @@ export const episodeResourceFeatures: FeatureType[] = [
     },
     uploadPath: (record, filename) => `videos/course-${record.get('courseId')}/${filename}`
   })
-]
+];
