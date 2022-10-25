@@ -11,7 +11,8 @@ export const userService = {
         'phone',
         'birth',
         'email',
-        'password'
+        'password',
+        'role'
       ],
       where: { email }
     })
